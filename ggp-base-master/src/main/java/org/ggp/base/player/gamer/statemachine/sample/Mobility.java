@@ -12,7 +12,7 @@ import org.ggp.base.util.statemachine.exceptions.TransitionDefinitionException;
 
 /**
  *
- * @author Ceren ALPAY
+ * @author Alpay
  */
 public final class Mobility extends SampleGamer
 {
@@ -51,7 +51,7 @@ public final class Mobility extends SampleGamer
 			}
 		}
 
-			//Eðer getNextState ile benim Machine deðiþmiyorsa destructive ile dene machine i kopyala kardeþ !
+			//EÃ°er getNextState ile benim Machine deÃ°iÃ¾miyorsa destructive ile dene machine i kopyala kardeÃ¾ !
 
     		selection = moves.get(The_Biggest_Index);
 
