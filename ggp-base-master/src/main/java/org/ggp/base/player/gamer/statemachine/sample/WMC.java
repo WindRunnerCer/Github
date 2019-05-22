@@ -22,7 +22,7 @@ import org.ggp.base.util.statemachine.exceptions.MoveDefinitionException;
 import org.ggp.base.util.statemachine.exceptions.TransitionDefinitionException;
 
 /**
- * @author Ceren ALPAY
+ * @author ALPAY
  */
 
 public final class WMC extends SampleGamer
@@ -40,7 +40,7 @@ public final class WMC extends SampleGamer
 	{
 
 		Move selection_real = null;
-		//Constructor ekle, durumunu al adamýn ona göre devam etsin
+		//Constructor ekle, durumunu al adamÃ½n ona gÃ¶re devam etsin
 	    int Heuristics[] = {0,1,2,3,4};
 	    //StateMachine theMachine;
 	    //First, Random, Next, Mobility-M, MC
@@ -66,7 +66,7 @@ public final class WMC extends SampleGamer
 			//f.getParentFile().mkdirs();
 			if(!(f.exists() || f.isDirectory())){
 				try {
-					//System.out.println("Abi dosya yok hemen oluþturuyorum");
+					//System.out.println("Abi dosya yok hemen oluÃ¾turuyorum");
 					f.createNewFile();
 					FileWriter fw = new FileWriter(f.getAbsoluteFile());
 					BufferedWriter bw = new BufferedWriter(fw);
@@ -95,7 +95,7 @@ public final class WMC extends SampleGamer
 			fr.close();
 			}
 			catch(FileNotFoundException e){
-				System.err.println("Böyle dosya yok ki "+ e);
+				System.err.println("BÃ¶yle dosya yok ki "+ e);
 				}
 
 			PrintWriter writer = new PrintWriter(f);
@@ -135,7 +135,7 @@ public final class WMC extends SampleGamer
 				}
 			}
 
-				//Eðer getNextState ile benim Machine deðiþmiyorsa destructive ile dene machine i kopyala kardeþ !
+				//EÃ°er getNextState ile benim Machine deÃ°iÃ¾miyorsa destructive ile dene machine i kopyala kardeÃ¾ !
 
 	    		selection = moves.get(The_Biggest_Index);
 
@@ -209,7 +209,7 @@ public final class WMC extends SampleGamer
 	int  WeightedMonteCarlo (int heuristics[], long timeout) throws IOException, GoalDefinitionException, MoveDefinitionException, TransitionDefinitionException {
 			//int random = new Random().nextInt(5);
 			//System.out.println(random);
-			// þimdilik böyle sonradan dinamik olmalý dizinin boyutu
+			// Ã¾imdilik bÃ¶yle sonradan dinamik olmalÃ½ dizinin boyutu
 			//long start = System.currentTimeMillis();
 			long finishBy = timeout - 2000;
 			int Game_statistics[] = new int[5];
@@ -250,7 +250,7 @@ public final class WMC extends SampleGamer
 			 //burda karar versin
 
 for (int j = 0; j < 5; j++){
-	 		if (System.currentTimeMillis() > finishBy)  //Finish by iþini ayarla!
+	 		if (System.currentTimeMillis() > finishBy)  //Finish by iÃ¾ini ayarla!
 	        break;
 
 			StateMachine theMachine = getStateMachine();
@@ -258,7 +258,7 @@ for (int j = 0; j < 5; j++){
 			//long finishBy = timeout - 1000;
 			Move selection = null;
 
-			//// Buraya benim adamý yazýcaz hepsinde hangisi dönüyosa onu seç
+			//// Buraya benim adamÃ½ yazÃ½caz hepsinde hangisi dÃ¶nÃ¼yosa onu seÃ§
 			if(j == 0){
 
 			List<Move> moves = theMachine.getLegalMoves(getCurrentState(), getRole());
@@ -281,7 +281,7 @@ for (int j = 0; j < 5; j++){
 				//f.getParentFile().mkdirs();
 				if(!(f2.exists() || f2.isDirectory())){
 					try {
-						//System.out.println("Abi dosya yok hemen oluþturuyorum");
+						//System.out.println("Abi dosya yok hemen oluÃ¾turuyorum");
 						f2.createNewFile();
 						FileWriter fw = new FileWriter(f2.getAbsoluteFile());
 						BufferedWriter bw = new BufferedWriter(fw);
@@ -311,7 +311,7 @@ for (int j = 0; j < 5; j++){
 				fr.close();
 				}
 				catch(FileNotFoundException e){
-					System.err.println("Böyle dosya yok ki "+ e);
+					System.err.println("BÃ¶yle dosya yok ki "+ e);
 					}
 
 				PrintWriter writer = new PrintWriter(f2);
@@ -348,7 +348,7 @@ for (int j = 0; j < 5; j++){
 					}
 				}
 
-					//Eðer getNextState ile benim Machine deðiþmiyorsa destructive ile dene machine i kopyala kardeþ !
+					//EÃ°er getNextState ile benim Machine deÃ°iÃ¾miyorsa destructive ile dene machine i kopyala kardeÃ¾ !
 
 		    		selection = moves.get(The_Biggest_Index);
 
@@ -408,12 +408,12 @@ for (int j = 0; j < 5; j++){
 	    		// of the total score and total attempts accumulated for each move.
 
 			if(selection != null){
-				int theScore = performDepthChargeFromMove(getCurrentState(), selection);//mymove yaparsýn
+				int theScore = performDepthChargeFromMove(getCurrentState(), selection);//mymove yaparsÃ½n
 				MC_statistics[j] = theScore;
 				//System.out.println(MC_statistics[j]);
-				//System.out.println("cer bunu kaç kere yazmalý");
+				//System.out.println("cer bunu kaÃ§ kere yazmalÃ½");
 			}
-	    		   //ÞIMDI DOYADAKI ISTATISTIKLE ÇAPR PUNLARI
+	    		   //ÃžIMDI DOYADAKI ISTATISTIKLE Ã‡APR PUNLARI
 	    		   //int[] moveTotalAttempts[i] = 1;
 	}
 	int Total = 0;
@@ -426,7 +426,7 @@ for (int j = 0; j < 5; j++){
 		}
 
 		else{
-			System.out.println("gerçek hesaplama else");
+			System.out.println("gerÃ§ek hesaplama else");
 			Decision_Array[i] = MC_statistics[i];
 		}
 	}
