@@ -11,7 +11,7 @@ import org.ggp.base.util.statemachine.exceptions.MoveDefinitionException;
 import org.ggp.base.util.statemachine.exceptions.TransitionDefinitionException;
 
 /**
- * @author Ceren ALPAY
+ * @author ALPAY
  */
 
 public class Select_Next extends SampleGamer {
@@ -47,7 +47,7 @@ public class Select_Next extends SampleGamer {
 				}
 			}
 
-				//Eðer getNextState ile benim Machine deðiþmiyorsa destructive ile dene machine i kopyala kardeþ !
+				//EÃ°er getNextState ile benim Machine deÃ°iÃ¾miyorsa destructive ile dene machine i kopyala kardeÃ¾ !
 	    		// Perform depth charges for each candidate move, and keep track
 	    		// of the total score and total attempts accumulated for each move.
 
